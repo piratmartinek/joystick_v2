@@ -42,4 +42,7 @@ basic.forever(function () {
     }
     x_pos = Math.round(Math.map(pins.analogReadPin(AnalogPin.P2), 0, 1023, 4, 0))
     y_pos = Math.round(Math.map(pins.analogReadPin(AnalogPin.P1), 0, 1023, 4, 0))
+    led.plot(x_pos, y_pos)
+    basic.pause(100)
+    led.unplot(x_pos, y_pos)
 })
